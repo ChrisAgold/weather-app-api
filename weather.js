@@ -52,6 +52,10 @@ function getWeather(){
   }
 }
 
+
+
+
+
 function showResults(data){
   return  '<h2 style="font-weight:bold; font-size:30px; padding-top:20px;" class="text-center">Current Weather for '+data.name+', '+data.sys.country+'</h2>'+
     "<h3 style='padding-left:40px;'><strong>Weather</strong>: "+data.weather[0].main+"</h3>"+
