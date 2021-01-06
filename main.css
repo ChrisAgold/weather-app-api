@@ -1,3 +1,5 @@
+/****** index.html ******/
+
 body {
   font-family: 'Tangerine', serif;
   background-color: white;
@@ -59,9 +61,24 @@ ul#list_item {
   text-align: center;
 }
 
+/****** Current.html ******/
 
+#cityDiv {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
 
+/*For Input Field*/
+input[type='text'] {
+  height: 40px;
+  font-size: 20px;
+}
 
+#submitCity {
+  height: 40px;
+  font-weight: bold;
+}
 
 
 
