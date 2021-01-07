@@ -23,6 +23,19 @@ function onDragEnd() {
 
 marker.on('dragend', onDragEnd);
 
+// lat long
+
+marker.setLngLat(mapboxgl.LngLat.convert([-98.4951, 29.4246]));
+marker.addTo(map);
+
+function onDragEnd() {
+  var lngLat = marker.getLngLat();
+  NewFunction(lngLat.lat,lngLat.lng);
+}
+
+map.on("load",onDragEnd);
+marker.on("dragend", onDragEnd);
+
 
 // Search
 let searchString;

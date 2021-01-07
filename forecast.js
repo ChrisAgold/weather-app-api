@@ -46,7 +46,24 @@ $(document).ready(function(){
   });
 
 });
+// // Lat & long render
+// let latLong = [-83.44, -84.03];
+// function getWeather(lng, lat) {
+//   $.get("http://api.openweathermap.org/data/2,5/onecall", {
+//     APPID: weatherToken,
+//     lat: lat,
+//     lon: lng,
+//     units: "imperial"
+//   }).done => {
+//     $("#weatherArea").html(render(data.daily[0]));
+//     console.log(data.daily);
+//   });
+// }
+// var lngLat = marker.getLngLat();
+// getWeather(lngLat.lng, lngLat.lat);
 
+
+// Search Function
 function getForecast(){
   var city = $("#city").val();
   var days = $("#days").val();
@@ -98,4 +115,6 @@ function getForecast(){
   }
 
 }
+
+
 
