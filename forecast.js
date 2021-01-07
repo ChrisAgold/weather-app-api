@@ -118,3 +118,21 @@ function getForecast(){
 
 
 
+
+
+function onDragEnd() {
+  var lngLat = marker.getLngLat();
+  $.get("http://api.openweathermap.org/data/2.5/onecall", {
+    APPID: OPEN_WEATHER_APPID,
+    lat: lngLat.lat,
+    lon: lngLat.lng,
+    units: "imperial"
+  })
+    .done(function (data) {
+      updateWeatherCards(data);
+      map.flyTo({center: [lngLat.lng, lngLat.lat]})
+      map.set
+    });
+}
+
+
