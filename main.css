@@ -82,6 +82,27 @@ input[type='text'] {
   font-weight: bold;
 }
 
+/*Error Message*/
+#errorCity {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
 
+/*Footer*/
+.footer {
+  background-color: cyan;
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  bottom: 0;
+}
 
-
+/*Show Weather Data*/
+#showWeather {
+  width: 60%;
+  margin: auto;
+  background-color: cyan;
+  color: deeppink;
+  border-radius: 25px;
+}

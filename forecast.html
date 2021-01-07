@@ -2,15 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Title</title>
-  <link href="">
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Weather App - Forecast</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Your custom css styles go here -->
+  <link rel="stylesheet" href="main.css">
 </head>
 
+<!-- Main page content -->
 <body>
+<!--NavBar-->
+<nav class="navbar navbar-default" id="nav_bar">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand navbar-link weather">
+        <!-- img-responsive class allows image to be responsive in browser -->
+        <img src="img/logo.png" class="img-responsive" id="logo" alt=""><strong>Weather App</strong>
+      </a>
+      <!--button for navbar(collapsed shrinks to page)-->
+      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbarcol">
+        <!-- class= "sr-only" is for people using screen readers only-->
+        <span class="sr-only">Toggle navigation</span>
+        <!--Links inside navbar when page is collapsed-->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navcol">
+      <!--List of App's Pages-->
+      <ul class="nav navbar-nav navbar-right" id="nav_list">
+        <li><a href="current.html">Current</a></li>
+        <li><a href="forecast.html">Forecast</a></li>
+        <li><a href="https://openweathermap.org/">Open Weather Map</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<script src=""></script>
+<!--Jumbotron-->
+<div class="jumbotron" style="margin-bottom:0; background-color: cyan; color: deeppink;">
+  <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Weather Forecast</h2>
+</div>
+
+<div class="container" style="height:650px;">
+  <div class="row">
+    <div class="col-md-12" style="margin-bottom:10px;">
+      <h3 class="text-center text-primary">Enter City Name</h3>
+      <span id="error-message" class="text-center"></span>
+    </div>
+
+    <!--Submit Field & Button;
+    form-inline puts submit button & form area on same line-->
+    <div class="row form-group form-inline" id="cityDiv">
+      <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name.">
+      <input type="text" name="days" id="days" class="form-control" placeholder="Number: Min 1 & Max 16">
+      <button id="submitForecast" class="btn btn-primary">Search City</button>
+    </div>
+  </div>
+
+  <!--Div to display results-->
+  <div id="error"></div>
+  <div id="showWeather"></div>
+</div>
+
+<!--Footer-->
+<div class="footer">
+  <div class="container">
+    <div class="row text-center" style="padding-top:30px;">
+      <p style="color:deeppink;">Weather App</p>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="forecast.js"></script>
+<script src="js/keys.js"></script>
 </body>
-
-</html>

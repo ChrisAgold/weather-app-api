@@ -38,7 +38,7 @@
       <ul class="nav navbar-nav navbar-right" id="nav_list">
         <li><a href="current.html">Current</a></li>
         <li><a href="forecast.html">Forecast</a></li>
-        <li><a href="">Open Weather Map</a></li>
+        <li><a href="https://openweathermap.org/">Open Weather Map</a></li>
       </ul>
     </div>
   </div>
@@ -49,24 +49,33 @@
   <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Current Weather Information</h2>
 </div>
 
-<div class="container">
+<div class="container" style="height:650px;">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" style="margin-bottom:10px;">
       <h3 class="text-center text-primary">Enter City Name</h3>
+      <span id="error-message" class="text-center"></span>
     </div>
 
     <!--Submit Field & Button;
     form-inline puts submit button & form area on same line-->
     <div class="row form-group form-inline" id="cityDiv">
-      <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name.">
+      <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name." style="margin-top:10px;">
       <button id="submitCity" class="btn btn-primary">Search City</button>
     </div>
-
   </div>
 
 <!--Div to display results-->
   <div id="error"></div>
   <div id="showWeather"></div>
+</div>
+
+<!--Footer-->
+<div class="footer">
+  <div class="container">
+    <div class="row text-center" style="padding-top:30px;">
+      <p style="color:deeppink;">Weather App</p>
+    </div>
+  </div>
 </div>
 
 <!-- jQuery library -->
@@ -76,8 +85,5 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="weather.js"></script>
-<script src="keys.js"></script>
+<script src="js/keys.js"></script>
 </body>
-
-
-
