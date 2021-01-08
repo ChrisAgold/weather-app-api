@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta charset="utf-8"/>
-  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Weather App</title>
+  <!--Font Awesome-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- Your custom css styles go here -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
-
-<!-- Main page content -->
 <body>
 <!--NavBar-->
 <nav class="navbar navbar-default" id="nav_bar">
@@ -46,18 +46,58 @@
 
 <div class="row" id="headRow">
   <div class="col-md-12" id="colText">
-    <h2 class="text-center" id="colHeadText1">The Simple Weather App.</h2>
-    <h1 class="text-center" id="colHeadText2">Get weather information of any city.</h1>
-
+    <h2 class="text-center" id="colHeadText1"></h2>
+    <h1 class="text-center" id="colHeadText2"></h1>
 
     <ul class="list-inline" id="list_item">
-      <li>Temperature</li>
-      <li>Pressure</li>
-      <li>Wind Speed</li>
-      <li>Humidity</li>
+      <li id="list1"></li>
+      <li id="list2"></li>
+      <li id="list3"></li>
+      <li id="list4"></li>
     </ul>
   </div>
 </div>
+
+<div class="container" style="margin-bottom: 70px;">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center text-primary" style="margin-top:40px;">Welcome To Chris's Weather App</h2>
+      <p class="text-center" id="welcome-paragraph">Chris's weather app is a web-based application that allows users to
+        search for current weather information as well as weather forecast of different cities around the world. Users
+        can search for weather information by city name. Chris's weather app uses the openweathermap API which is found
+        at www.openweathermap.org</p>
+    </div>
+  </div>
+
+  <div class="row" id="rowDiv">
+    <div class="col-md-4" id="colDesc">
+      <div class="info-icon"><i class="fa fa-sun"></i></div>
+      <h3 class="text-center">Weather API</h3>
+      <p class="text-center">Use openweathermap API to get weather information of any city.</p>
+    </div>
+
+    <div class="col-md-4" id="colDesc">
+      <div class="info-icon"><i class="fa fa-search"></i></div>
+      <h3 class="text-center">Search</h3>
+      <p class="text-center">Search for current weather information and weather forecast.</p>
+    </div>
+
+    <div class="col-md-4" id="colDesc">
+      <div class="info-icon"><i class="fa fa-chevron-circle-down"></i></div>
+      <h3 class="text-center">View Result</h3>
+      <p class="text-center">Get information about temperature, pressure, humidity etc</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row text-center" style="padding-top:30px;">
+      <p style="color:deeppink">Chris's Weather App</p>
+    </div>
+  </div>
+</div>
+
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -65,4 +105,58 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<script src="typed.js"></script>
+
+<script>
+  $(document).ready(function () {
+    setTimeout(function () {
+      $("#colHeadText1").typed({
+        strings: ["The simplest weather app."],
+        typeSpeed: 40
+      })
+    }, 0);
+
+    setTimeout(function () {
+      $("#colHeadText2").typed({
+        strings: ["Get weather information of any city."],
+        typeSpeed: 50
+      })
+    }, 2000);
+
+    setTimeout(function () {
+      $("#list1").typed({
+        strings: ["Temperature"],
+        typeSpeed: 50
+      })
+    }, 4000);
+
+    setTimeout(function () {
+      $("#list2").typed({
+        strings: ["Pressure"],
+        typeSpeed: 50
+      })
+    }, 6000);
+
+    setTimeout(function () {
+      $("#list3").typed({
+        strings: ["Wind Speed"],
+        typeSpeed: 50
+      })
+    }, 8000);
+
+    setTimeout(function () {
+      $("#list4").typed({
+        strings: ["Humidity"],
+        typeSpeed: 50
+      })
+    }, 10000);
+  });
+</script>
 </body>
+</html>

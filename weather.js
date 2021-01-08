@@ -1,33 +1,3 @@
-// // Submit Button Click Event
-// $(document).ready(function() {
-//   $("#submitCity").click(function() {
-// return getWeather();
-//   });
-// });
-//
-// // Ajax Function Call for Submit Button
-// function getWeather() {
-//   var city = $("#city").val();
-//
-//   if(city != '') {
-//     // ajax method to get data from api, concatinate the city that is submitted
-//     $.ajax({
-//       url: 'https://api.openweathermap.org/data/2.5/weather?q=San-antonio&APPID=c23ee8825286d8ae6b29cb340e84ae93'
-//       // type: "GET",
-//       // jsonp = javascript notation pattern
-//       // dataType: "jsonp",
-//       // if call to api is successful execute the following fucntion
-//       success: function(data){
-//         console.log(data);
-// $("#showWeather").html();
-//       }
-//       });
-//   } else {
-//     // if the field in input is empty
-//     $("#error").html("<div>City field cannot be empty</div>")
-//   }
-//
-// }
 $(document).ready(function(){
   $("#submitCity").click(function(){
     return getWeather();
